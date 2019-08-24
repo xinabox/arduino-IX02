@@ -24,7 +24,7 @@ bool xXI02::begin(uint8_t pin)
   pinFunction(ss_pin, 0);
   setClockDivider(SC18IS602_CLOCK_1843K);
   setDataMode(SC18IS602_SPI_MODE0);
-  setBitOrder(MSBFIRST);
+  setBitOrder(LSBFIRST); // actually MSBFIRST. 
   return true;
 }
 void xXI02::pinMode(uint8_t pin, uint8_t mode)
